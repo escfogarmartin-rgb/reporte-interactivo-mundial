@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte Mundial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img src="img/hola (2).png" alt="Mundial" class="fondo">
+  <main class="app">
+    <section class="prompt" aria-label="Consulta SQL">
+      <div class="titulo">CONSULTA SQL</div>
+      <textarea id="consulta" spellcheck="false" placeholder="Escribe tu consulta SQL aquí...">SELECT * FROM paises_mundial LIMIT 10;</textarea>
+      <div class="acciones">
+        <button id="ejecutar">Ejecutar consulta</button>
+        <button id="limpiar" class="secundario">Limpiar</button>
+      </div>
+      <div id="estado" class="estado">Cargando base de datos…</div>
+    </section>
+
+    <section id="resultado" class="resultado" aria-live="polite"></section>
+  </main>
+
+  <!-- SQL.js: SQLite ejecutándose dentro del navegador. No requiere PHP ni MySQL. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
